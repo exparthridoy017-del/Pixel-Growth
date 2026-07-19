@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ SEO META TAGS ============ -->
+<title>Pixel & Growth — Hridoy Ray | Digital Marketing & Creative Branding</title>
+<meta name="description" content="Hridoy Ray — Digital Marketing Expert, Graphic Designer & SEO Specialist. Creative branding, lead generation and growth-driven design based in Comilla, Bangladesh.">
+<meta name="keywords" content="digital marketing, graphic design, SEO, lead generation, brand identity, Hridoy Ray, Pixel & Growth">
+<meta name="author" content="Hridoy Ray">
+<link rel="canonical" href="https://pixelandgrowth.com/">
+
+<!-- ============ OPEN GRAPH TAGS ============ -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pixel & Growth — Hridoy Ray | Digital Marketing & Creative Branding">
+<meta property="og:description" content="Creative design, digital marketing, SEO and lead generation — grow your business with Pixel & Growth.">
+<meta property="og:image" content="assets/images/og-cover.jpg">
+<meta property="og:url" content="https://pixelandgrowth.com/">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- EDIT FAVICON PLACEHOLDER -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230F172A%22/><rect x=%2222%22 y=%2255%22 width=%2214%22 height=%2224%22 fill=%22%2306B6D4%22/><rect x=%2242%22 y=%2238%22 width=%2214%22 height=%2241%22 fill=%22%232563EB%22/><rect x=%2262%22 y=%2222%22 width=%2214%22 height=%2257%22 fill=%22%2310B981%22/></svg>">
+
+<!-- ============ GOOGLE ANALYTICS PLACEHOLDER ============ -->
+<!-- EDIT ANALYTICS: paste your GA4 snippet here -->
+
+<!-- ============ FONTS ============ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- ============ ICONS (Lucide, CDN) ============ -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ LOADING SCREEN ============ -->
+<div id="loader" class="loader" aria-hidden="true">
+  <div class="loader-mark">
+    <span class="loader-bar b1"></span>
+    <span class="loader-bar b2"></span>
+    <span class="loader-bar b3"></span>
+  </div>
+  <p class="loader-text">PIXEL <span>&</span> GROWTH</p>
+</div>
+
+<!-- ============ CUSTOM CURSOR ============ -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ============ AMBIENT BACKGROUND (signature growth-grid canvas) ============ -->
+<canvas id="growthCanvas" class="growth-canvas" aria-hidden="true"></canvas>
+
+<!-- ====================================================
+     NAVBAR
+==================================================== -->
+<!-- EDIT WEBSITE NAME -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo" aria-label="Pixel & Growth home">
+      <span class="logo-mark" aria-hidden="true">
+        <i class="bar bar-1"></i><i class="bar bar-2"></i><i class="bar bar-3"></i>
+      </span>
+      <span class="logo-text">Pixel <em>&amp;</em> Growth</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#about" data-nav>About</a>
+      <a href="#services" data-nav>Services</a>
+      <a href="#skills" data-nav>Skills</a>
+      <a href="#portfolio" data-nav>Portfolio</a>
+      <a href="#process" data-nav>Process</a>
+      <a href="#testimonials" data-nav>Reviews</a>
+      <a href="#contact" data-nav>Contact</a>
+      <a href="#contact" class="btn btn-primary nav-cta">Hire Me</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- ANIMATED MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" data-nav>About</a>
+    <a href="#services" data-nav>Services</a>
+    <a href="#skills" data-nav>Skills</a>
+    <a href="#portfolio" data-nav>Portfolio</a>
+    <a href="#process" data-nav>Process</a>
+    <a href="#testimonials" data-nav>Reviews</a>
+    <a href="#faq" data-nav>FAQ</a>
+    <a href="#contact" data-nav>Contact</a>
+    <a href="#contact" class="btn btn-primary" data-nav>Hire Me</a>
+  </div>
+</header>
+
+<!-- ====================================================
+     HERO
+==================================================== -->
+<section id="home" class="hero">
+  <div class="hero-shapes" aria-hidden="true">
+    <span class="shape shape-a"></span>
+    <span class="shape shape-b"></span>
+    <span class="shape shape-c"></span>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-copy" data-reveal>
+      <p class="eyebrow"><span class="dot"></span>Available for new projects — Comilla, Bangladesh</p>
+
+      <!-- EDIT HERO HEADLINE -->
+      <h1 class="hero-title">
+        Grow Your Business With
+        <span class="grad-text">Creative Design</span>
+        &amp; Digital Marketing
+      </h1>
+
+      <!-- EDIT HERO DESCRIPTION -->
+      <p class="hero-desc">
+        I'm Hridoy Ray — a digital marketing expert and brand designer helping
+        businesses turn <span class="typed" id="typedWord">attention</span><span class="cursor-blink">|</span>
+        into measurable growth through strategy, striking design, and data-driven campaigns.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Hire Me</a>
+        <a href="assets/Hridoy-Ray-CV.pdf" class="btn btn-ghost" download>Download CV</a>
+        <a href="#portfolio" class="btn btn-link">View Portfolio <i data-lucide="arrow-down-right"></i></a>
+      </div>
+
+      <div class="hero-stats">
+        <div><strong>60+</strong><span>Projects Completed</span></div>
+        <div><strong>45+</strong><span>Happy Clients</span></div>
+        <div><strong>3+</strong><span>Years Experience</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual" data-reveal>
+      <div class="profile-card floating-card">
+        <!-- EDIT PROFILE IMAGE -->
+        <div class="profile-photo-wrap">
+          <img src="assets/images/profile-photo.jpg" alt="Hridoy Ray — Digital Marketing Expert & Graphic Designer" class="profile-photo" onerror="this.src='assets/images/profile-placeholder.svg'">
+          <span class="profile-glow" aria-hidden="true"></span>
+        </div>
+        <div class="profile-badge badge-top">
+          <i data-lucide="trending-up"></i>
+          <div><strong>+128%</strong><span>Avg. lead growth</span></div>
+        </div>
+        <div class="profile-badge badge-bottom">
+          <i data-lucide="palette"></i>
+          <div><strong>60+</strong><span>Brands designed</span></div>
+        </div>
+        <div class="profile-name-tag">
+          <p>Hridoy Ray</p>
+          <span>Digital Marketing &amp; Brand Designer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+    <span class="scroll-pixels" aria-hidden="true"><i></i><i></i><i></i></span>
+    Scroll
+  </a>
+</section>
+
+<!-- ====================================================
+     ABOUT
+==================================================== -->
+<!-- EDIT ABOUT -->
+<section id="about" class="section about">
+  <div class="section-inner about-grid">
+    <div class="about-visual" data-reveal>
+      <div class="about-photo-frame">
+        <img src="assets/images/profile-photo-2.jpg" alt="Hridoy Ray at work" onerror="this.src='assets/images/profile-placeholder.svg'">
+      </div>
+      <div class="about-exp-card">
+        <strong>3+</strong>
+        <span>Years of Experience</span>
+      </div>
+    </div>
+
+    <div class="about-content" data-reveal>
+      <p class="eyebrow">About Me</p>
+      <h2 class="section-title">Design with intent. Marketing with data.</h2>
+      <p class="about-bio">
+        I'm Hridoy Ray, a digital marketing expert and graphic designer based in
+        Comilla, Chattogram, Bangladesh. Over the past few years I've helped local
+        restaurants, product brands, and startups turn plain ideas into scroll-stopping
+        visuals and campaigns that actually convert — from Facebook ad creatives and
+        SEO-optimized content to full brand identities and lead-generation funnels.
+      </p>
+      <p class="about-bio">
+        My approach sits at the intersection of design and performance: every visual
+        I ship is built to look premium <em>and</em> earn its place in a growth strategy.
+      </p>
+
+      <div class="about-pillars">
+        <div class="pillar">
+          <i data-lucide="target"></i>
+          <div>
+            <h3>Mission</h3>
+            <p>Help small and growing businesses look and market themselves like industry leaders.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <i data-lucide="telescope"></i>
+          <div>
+            <h3>Vision</h3>
+            <p>Become the go-to creative partner for brands that want design backed by data.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-card" data-count="60">
+          <span class="stat-num" data-target="60">0</span><span class="stat-plus">+</span>
+          <p>Projects Completed</p>
+        </div>
+        <div class="stat-card" data-count="45">
+          <span class="stat-num" data-target="45">0</span><span class="stat-plus">+</span>
+          <p>Happy Clients</p>
+        </div>
+        <div class="stat-card" data-count="3">
+          <span class="stat-num" data-target="3">0</span><span class="stat-plus">+</span>
+          <p>Years Experience</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     SERVICES
+==================================================== -->
+<!-- EDIT SERVICES -->
+<section id="services" class="section services">
+  <div class="section-inner">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">What I Do</p>
+      <h2 class="section-title">Services built to grow your brand</h2>
+      <p class="section-sub">A full creative-and-marketing toolkit — pick a service or bundle them into a complete growth package.</p>
+    </div>
+
+    <div class="services-grid" data-reveal>
+      <article class="service-card">
+        <i data-lucide="palette"></i>
+        <h3>Graphic Design</h3>
+        <p>Posters, social creatives, packaging and print — visuals designed to stop the scroll.</p>
+      </article>
+      <article class="service-card">
+        <i data-lucide="share-2"></i>
+        <h3>Social Media Management</h3>
+        <p>Content calendars, community management, and consistent brand presence across platforms.</p>
+      </article>
+      <article class="service-card">
+        <i data-lucide="search"></i>
+        <h3>SEO</h3>
+        <p>On-page and technical SEO to help your business rank and get found by the right people.</p>
+      </article>
+      <article class="service-card">
+        <i data-lucide="mail"></i>
+        <h3>Email Marketing</h3>
+        <p>Sequences and campaigns that nurture leads and turn subscribers into customers.</p>
+      </article>
+      <article class="service-card">
+        <i data-lucide="users"></i>
+        <h3>Lead Generation</h3>
+        <p>Funnels and ad campaigns engineered to bring in qualified leads, consistently.</p>
+      </article>
+      <article class="service-card">
+        <i data-lucide="fingerprint"></i>
+        <h3>Brand Identity</h3>
+        <p>Logos, color systems and guidelines that give your business a distinct visual voice.</p>
+      </article>
+      <article class="service-card">
+        <i data-lucide="pen-tool"></i>
+        <h3>Content Creation</h3>
+        <p>Photo, video and copy content tailored for how each platform's audience actually consumes it.</p>
+      </article>
+      <article class="service-card">
+        <i data-lucide="facebook"></i>
+        <h3>Facebook Marketing</h3>
+        <p>Ad creatives, targeting and optimization built around real conversion data.</p>
+      </article>
+      <article class="service-card">
+        <i data-lucide="instagram"></i>
+        <h3>Instagram Marketing</h3>
+        <p>Reels, grids and stories strategy designed for reach and retention.</p>
+      </article>
+      <article class="service-card">
+        <i data-lucide="linkedin"></i>
+        <h3>LinkedIn Marketing</h3>
+        <p>B2B content and outreach that builds authority and pipeline.</p>
+      </article>
+      <article class="service-card">
+        <i data-lucide="line-chart"></i>
+        <h3>Business Strategy</h3>
+        <p>Positioning and growth planning so every creative decision serves a bigger goal.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     SKILLS
+==================================================== -->
+<section id="skills" class="section skills">
+  <div class="section-inner skills-grid">
+    <div class="section-head skills-head" data-reveal>
+      <p class="eyebrow">Toolkit</p>
+      <h2 class="section-title">Skills &amp; tools I work with daily</h2>
+      <p class="section-sub">Design software, marketing platforms and strategy skills sharpened across 60+ live projects.</p>
+    </div>
+
+    <div class="skills-bars" data-reveal>
+      <div class="skill-item" data-level="92">
+        <div class="skill-label"><span>Photoshop</span><span class="skill-pct">92%</span></div>
+        <div class="skill-track"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-item" data-level="95">
+        <div class="skill-label"><span>Canva</span><span class="skill-pct">95%</span></div>
+        <div class="skill-track"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-item" data-level="85">
+        <div class="skill-label"><span>Illustrator</span><span class="skill-pct">85%</span></div>
+        <div class="skill-track"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-item" data-level="88">
+        <div class="skill-label"><span>SEO</span><span class="skill-pct">88%</span></div>
+        <div class="skill-track"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-item" data-level="90">
+        <div class="skill-label"><span>Meta Ads</span><span class="skill-pct">90%</span></div>
+        <div class="skill-track"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-item" data-level="86">
+        <div class="skill-label"><span>Email Marketing</span><span class="skill-pct">86%</span></div>
+        <div class="skill-track"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-item" data-level="89">
+        <div class="skill-label"><span>Lead Generation</span><span class="skill-pct">89%</span></div>
+        <div class="skill-track"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-item" data-level="93">
+        <div class="skill-label"><span>Google Workspace</span><span class="skill-pct">93%</span></div>
+        <div class="skill-track"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-item" data-level="87">
+        <div class="skill-label"><span>Content Strategy</span><span class="skill-pct">87%</span></div>
+        <div class="skill-track"><div class="skill-fill"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     FEATURED PORTFOLIO
+==================================================== -->
+<!-- EDIT PORTFOLIO -->
+<section id="portfolio" class="section portfolio">
+  <div class="section-inner">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Selected Work</p>
+      <h2 class="section-title">Featured Portfolio</h2>
+      <p class="section-sub">A mix of ad creatives, social campaigns and brand visuals from recent client work.</p>
+    </div>
+
+    <div class="portfolio-filters" data-reveal>
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Food & Beverage">Food &amp; Beverage</button>
+      <button class="filter-btn" data-filter="Product">Product</button>
+      <button class="filter-btn" data-filter="Menu Design">Menu Design</button>
+    </div>
+
+    <div class="portfolio-grid" data-reveal id="portfolioGrid">
+
+      <article class="portfolio-card" data-cat="Food & Beverage">
+        <div class="pf-img"><img src="assets/images/portfolio/project-01-dominos-transit.jpg" alt="Domino's free home delivery transit ad" loading="lazy"></div>
+        <div class="pf-body">
+          <span class="pf-cat">Food &amp; Beverage</span>
+          <h3>Domino's — Transit Ad Campaign</h3>
+          <p>Out-of-home bus-shelter creative promoting a free-delivery promo code.</p>
+          <a href="#contact" class="pf-link">View Project <i data-lucide="arrow-up-right"></i></a>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-cat="Food & Beverage">
+        <div class="pf-img"><img src="assets/images/portfolio/project-02-dominos-poster.jpg" alt="Domino's free home delivery poster design" loading="lazy"></div>
+        <div class="pf-body">
+          <span class="pf-cat">Food &amp; Beverage</span>
+          <h3>Domino's — Delivery Promo Poster</h3>
+          <p>Digital poster variant built for social and in-store display.</p>
+          <a href="#contact" class="pf-link">View Project <i data-lucide="arrow-up-right"></i></a>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-cat="Food & Beverage">
+        <div class="pf-img"><img src="assets/images/portfolio/project-03-shawarma-promo.jpg" alt="Shawarma restaurant promotional design" loading="lazy"></div>
+        <div class="pf-body">
+          <span class="pf-cat">Food &amp; Beverage</span>
+          <h3>Molly's Restaurant — Shawarma Promo</h3>
+          <p>Street-style shawarma campaign creative with bold, appetite-driven typography.</p>
+          <a href="#contact" class="pf-link">View Project <i data-lucide="arrow-up-right"></i></a>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-cat="Product">
+        <div class="pf-img"><img src="assets/images/portfolio/project-04-mango-season.jpg" alt="Mango season product ad in Bengali" loading="lazy"></div>
+        <div class="pf-body">
+          <span class="pf-cat">Product</span>
+          <h3>Seasonal Mango — Product Campaign</h3>
+          <p>Bengali-language seasonal produce ad built around warm, appetising tones.</p>
+          <a href="#contact" class="pf-link">View Project <i data-lucide="arrow-up-right"></i></a>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-cat="Menu Design">
+        <div class="pf-img"><img src="assets/images/portfolio/project-05-hridoy-food-menu.jpg" alt="Hridoy Food ramen house menu design" loading="lazy"></div>
+        <div class="pf-body">
+          <span class="pf-cat">Menu Design</span>
+          <h3>Hridoy Food — Ramen House Menu</h3>
+          <p>Full dishes-and-drinks menu layout for a fast-food and ramen concept.</p>
+          <a href="#contact" class="pf-link">View Project <i data-lucide="arrow-up-right"></i></a>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-cat="Food & Beverage">
+        <div class="pf-img"><img src="assets/images/portfolio/project-06-chicken-biriyani.jpg" alt="Chicken biriyani promotional design" loading="lazy"></div>
+        <div class="pf-body">
+          <span class="pf-cat">Food &amp; Beverage</span>
+          <h3>Chicken Biriyani — Discount Campaign</h3>
+          <p>Moody, appetite-forward creative built to promote a limited-time discount.</p>
+          <a href="#contact" class="pf-link">View Project <i data-lucide="arrow-up-right"></i></a>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-cat="Product">
+        <div class="pf-img"><img src="assets/images/portfolio/project-07-apple-watch.jpg" alt="Apple Watch Ultra 3 product ad" loading="lazy"></div>
+        <div class="pf-body">
+          <span class="pf-cat">Product</span>
+          <h3>Apple Watch Ultra — Feature Ad</h3>
+          <p>Clean, spec-driven tech ad layout highlighting durability and display.</p>
+          <a href="#contact" class="pf-link">View Project <i data-lucide="arrow-up-right"></i></a>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-cat="Product">
+        <div class="pf-img"><img src="assets/images/portfolio/project-08-himalaya-facewash.jpg" alt="Himalaya Men face wash product ad" loading="lazy"></div>
+        <div class="pf-body">
+          <span class="pf-cat">Product</span>
+          <h3>Himalaya Men — Face Wash Ad</h3>
+          <p>Dark, editorial product shot with benefit call-outs for an active-lifestyle audience.</p>
+          <a href="#contact" class="pf-link">View Project <i data-lucide="arrow-up-right"></i></a>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-cat="Menu Design">
+        <div class="pf-img"><img src="assets/images/portfolio/project-09-food-menu-pizza.jpg" alt="Delicious food menu pizza design" loading="lazy"></div>
+        <div class="pf-body">
+          <span class="pf-cat">Menu Design</span>
+          <h3>Delicious Food Menu — Pizza Feature</h3>
+          <p>Playful menu-cover creative built around a fresh, top-down pizza shot.</p>
+          <a href="#contact" class="pf-link">View Project <i data-lucide="arrow-up-right"></i></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     PROCESS
+==================================================== -->
+<section id="process" class="section process">
+  <div class="section-inner">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">How I Work</p>
+      <h2 class="section-title">A process built for growth, step by step</h2>
+    </div>
+
+    <div class="process-track" data-reveal>
+      <div class="process-step">
+        <span class="process-num">01</span>
+        <h3>Discovery</h3>
+        <p>Understand your business, audience and goals before a single pixel is placed.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-num">02</span>
+        <h3>Planning</h3>
+        <p>Map the strategy, content calendar and creative direction against your goals.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-num">03</span>
+        <h3>Design</h3>
+        <p>Build the visuals — brand assets, ad creatives, and campaign materials.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-num">04</span>
+        <h3>Marketing</h3>
+        <p>Launch across the right channels with targeting tuned for your audience.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-num">05</span>
+        <h3>Growth</h3>
+        <p>Track results, optimize continuously, and scale what's working.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     TESTIMONIALS
+==================================================== -->
+<section id="testimonials" class="section testimonials">
+  <div class="section-inner">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Client Words</p>
+      <h2 class="section-title">What clients say</h2>
+    </div>
+
+    <div class="testimonial-grid" data-reveal>
+      <article class="testimonial-card">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>"Hridoy redesigned our menu and social creatives — orders from Instagram went up almost immediately. Fast, professional, and genuinely creative."</p>
+        <div class="testi-person">
+          <span class="avatar-placeholder">RA</span>
+          <div><strong>Rafiul Ahmed</strong><span>Restaurant Owner</span></div>
+        </div>
+      </article>
+      <article class="testimonial-card">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>"Clear communication, great turnaround, and the SEO work actually moved our rankings. Exactly the kind of partner a small business needs."</p>
+        <div class="testi-person">
+          <span class="avatar-placeholder">NS</span>
+          <div><strong>Nusrat Sultana</strong><span>E-commerce Founder</span></div>
+        </div>
+      </article>
+      <article class="testimonial-card">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>"Our brand finally looks as good as our product. The identity work and ad creatives Hridoy built are still the best assets we have."</p>
+        <div class="testi-person">
+          <span class="avatar-placeholder">TK</span>
+          <div><strong>Tanvir Karim</strong><span>Startup Co-founder</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     FAQ
+==================================================== -->
+<section id="faq" class="section faq">
+  <div class="section-inner faq-grid">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">FAQ</p>
+      <h2 class="section-title">Common questions</h2>
+      <p class="section-sub">Can't find the answer you're after? Reach out on the contact form below.</p>
+    </div>
+
+    <div class="accordion" data-reveal>
+      <div class="accordion-item">
+        <button class="accordion-head">
+          <span>What services do you offer?</span><i data-lucide="plus"></i>
+        </button>
+        <div class="accordion-body"><p>Graphic design, social media management, SEO, email marketing, lead generation, brand identity, and content creation — individually or as a bundled growth package.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-head">
+          <span>How long does a typical project take?</span><i data-lucide="plus"></i>
+        </button>
+        <div class="accordion-body"><p>A single creative or ad set usually takes 2–5 days. Full brand identity or ongoing marketing retainers are scoped individually after our discovery call.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-head">
+          <span>Do you work with clients outside Bangladesh?</span><i data-lucide="plus"></i>
+        </button>
+        <div class="accordion-body"><p>Yes — I work with clients remotely worldwide via Upwork, Freelancer, and direct contract, with communication over email or WhatsApp.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-head">
+          <span>How do we get started?</span><i data-lucide="plus"></i>
+        </button>
+        <div class="accordion-body"><p>Fill out the contact form below or email me directly with a short brief. I'll follow up within 24 hours to schedule a discovery call.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     CONTACT
+==================================================== -->
+<!-- EDIT CONTACT -->
+<section id="contact" class="section contact">
+  <div class="section-inner contact-grid">
+    <div class="contact-info" data-reveal>
+      <p class="eyebrow">Get In Touch</p>
+      <h2 class="section-title">Let's grow something great together</h2>
+      <p class="section-sub">Have a project in mind? Send a message and I'll get back to you within a day.</p>
+
+      <ul class="contact-list">
+        <li>
+          <i data-lucide="mail"></i>
+          <div><span>Email</span><a href="mailto:hridoy@gmail.com">hridoy@gmail.com</a></div>
+        </li>
+        <li>
+          <i data-lucide="phone"></i>
+          <div><span>Mobile</span><a href="tel:+8801619022699">+880 1619-022699</a></div>
+        </li>
+        <li>
+          <i data-lucide="map-pin"></i>
+          <div><span>Location</span><p>Comilla, Chattogram, Bangladesh</p></div>
+        </li>
+      </ul>
+
+      <!-- EDIT SOCIAL LINKS -->
+      <div class="social-row">
+        <a href="https://www.behance.net/hridoyray31" target="_blank" rel="noopener" aria-label="Behance"><i data-lucide="dribbble"></i></a>
+        <a href="https://www.instagram.com/expart.hridoy" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61572103875491" target="_blank" rel="noopener" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+        <a href="https://www.freelancer.com/u/hridoyray4" target="_blank" rel="noopener" aria-label="Freelancer"><i data-lucide="briefcase"></i></a>
+        <a href="https://www.upwork.com/" target="_blank" rel="noopener" aria-label="Upwork"><i data-lucide="circle-dot"></i></a>
+      </div>
+
+      <div class="map-placeholder">
+        <i data-lucide="map"></i>
+        <span>Google Map — Comilla, Chattogram, Bangladesh</span>
+      </div>
+    </div>
+
+    <form class="contact-form" id="contactForm" data-reveal>
+      <div class="form-row">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" placeholder="Your full name" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+      </div>
+      <label>
+        <span>Phone</span>
+        <input type="tel" name="phone" placeholder="+880 1XXX-XXXXXX">
+      </label>
+      <label>
+        <span>Message</span>
+        <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary form-submit">
+        Send Message <i data-lucide="send"></i>
+      </button>
+      <p class="form-note" id="formNote" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ====================================================
+     FOOTER
+==================================================== -->
+<footer class="footer">
+  <div class="section-inner footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="logo">
+        <span class="logo-mark" aria-hidden="true"><i class="bar bar-1"></i><i class="bar bar-2"></i><i class="bar bar-3"></i></span>
+        <span class="logo-text">Pixel <em>&amp;</em> Growth</span>
+      </a>
+      <p>Creative Design • Digital Marketing • SEO • Lead Generation</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#services">Graphic Design</a>
+      <a href="#services">SEO</a>
+      <a href="#services">Lead Generation</a>
+      <a href="#services">Brand Identity</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:hridoy@gmail.com">hridoy@gmail.com</a>
+      <a href="tel:+8801619022699">+880 1619-022699</a>
+      <p>Comilla, Chattogram, Bangladesh</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Follow</h4>
+      <div class="social-row">
+        <a href="https://www.behance.net/hridoyray31" target="_blank" rel="noopener" aria-label="Behance"><i data-lucide="dribbble"></i></a>
+        <a href="https://www.instagram.com/expart.hridoy" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61572103875491" target="_blank" rel="noopener" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+        <a href="https://www.freelancer.com/u/hridoyray4" target="_blank" rel="noopener" aria-label="Freelancer"><i data-lucide="briefcase"></i></a>
+        <a href="https://www.upwork.com/" target="_blank" rel="noopener" aria-label="Upwork"><i data-lucide="circle-dot"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Pixel &amp; Growth — Hridoy Ray. All rights reserved.</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i data-lucide="arrow-up"></i>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
